@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkStep — Case Study | Sophia Pinto</title>
+  <meta name="description" content="A 20-session case study designing SparkStep, an adaptive math tool for grades 3–5 built to make struggling students feel capable before it measures them.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="mark" href="index.html">Sophia Pinto</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-study.html" aria-current="page">Case Study</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="wrap">
+      <p class="eyebrow">Case Study &middot; Speculative Product</p>
+      <h1>SparkStep</h1>
+      <p class="dek">An adaptive math tool for grades 3&ndash;5, designed to make a struggling student feel capable before it asks anything of them.</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="wrap">
+
+      <p>Upper elementary is a pivotal moment in a child's development. Between grades 3 and 5, students begin forming lasting identities &mdash; "I'm a good student" or "I'm not a math person." This shift happens at exactly the same time that school becomes performance-based: state testing begins, grades carry more weight, and the gap between struggling students and their peers becomes visible and measurable.</p>
+
+      <p>Research shows that elementary academic rank predicts high school graduation, university completion, and future earnings &mdash; with math rank being especially predictive of later income. For students from lower socioeconomic backgrounds, early academic performance is even more predictive of long-term outcomes. Beyond just knowledge and grades, elementary academic rank shapes a student's confidence and identity &mdash; which independently fuels long-term success.</p>
+
+      <p>For students who are already behind, the timing is brutal. Every tool that measures them &mdash; think percentage scores, red zones, and diagnostics measuring them behind &mdash; arrives at the moment they are most vulnerable to believing it defines them.</p>
+
+      <p>I spent two years teaching 4th grade math at a Title I school in Atlanta. I watched students click through adaptive math tools without trying, not because they were lazy, but because trying and failing felt worse than not trying at all. The tools we used were built to tell teachers where students were. Nobody had built one to make a struggling student feel like they could get somewhere.</p>
+
+      <p>This is my attempt to design that tool.</p>
+
+      <div class="callout">
+        <span class="callout-label">The Problem</span>
+        <p>With constant external pressure, teachers are forced to prioritize measurable growth in students' academic performance, sometimes at the cost of their emotional wellbeing.</p>
+        <p>Low-performing 4th graders in Title I schools disengage from adaptive math tools because the tools are designed to measure them, not to make them feel capable. There's no scaffolding that builds confidence before asking for performance, and no felt sense of progress beyond scores and grades.</p>
+      </div>
+
+      <h2>The research</h2>
+      <p>Starting from my own public-school tech stack, I researched the adaptive math tools that students love and hate. Open forums like Reddit and parent blogs exposed opinions that my 9-year-olds can't necessarily express themselves. Teacher forums and online dialogues compared what works and what doesn't. Parent discussion posts and reviews led me to what some parents are doing at home to fill the gaps they believe are not being addressed in the classroom.</p>
+
+      <p>I examined tools across two categories: curriculum-focused adaptive platforms (i-Ready, Prodigy Math, Khan Academy Kids, Beast Academy, and IXL) and confidence-first tools (RightON!, Coteach, and Rori).</p>
+
+      <p>Existing adaptive math tools fail struggling elementary students not because they are insufficiently engaging or "fun," but because they don't address the root cause of disengagement: self-confidence. The tools that prioritize teacher data &mdash; such as i-Ready and IXL &mdash; are the least engaging for students, and often penalize them for making mistakes by dropping their percentage score or pushing them into a "red" or "yellow" zone. Tools that students actually enjoy, such as Prodigy Math, offer high engagement but little to no scaffolding for struggling learners to achieve the small wins that build genuine capability. The one tool on the market that directly addresses math-related confidence is Rori, but it is limited in accessibility &mdash; delivered via WhatsApp and personal mobile devices, which many Title I students cannot access during school &mdash; and does not provide multiple means of engagement as outlined by UDL principles, which is critical when designing for students with disabilities such as autism, ADHD, or specific learning disorders. Its chatbot design doesn't align with my goals for the population I am designing for.</p>
+
+      <p>The gap is not a lack of tools, but rather a lack of tools designed to make a struggling student feel capable first, and measurable second.</p>
+
+      <h2>The user</h2>
+      <p>Myles is a 3rd&ndash;5th grade student attending a public Title I elementary school. His reading and math performance is below grade level, he has an IEP for Specific Learning Disorder and is on the autism spectrum. He has been using adaptive math tools for years, and finds them to be boring busy work &mdash; isolating rather than engaging.</p>
+
+      <p>During class, Myles has a Chromebook in a station rotation and sometimes in the morning before first period begins. His biggest priority at school isn't his test scores, it's feeling normal among his peers. He wants to belong, even though his IEP marks him as different in ways he's aware of. He responds to small wins in the moment far more than long-term performance metrics. He benefits from predictable routines, clear visual structures, and reduced unnecessary stimuli.</p>
+
+      <p>When a lesson feels too hard, too easy, or too repetitive, he clicks through. Not because he doesn't care about learning, but because it doesn't really feel worth it after years of seeing himself in the "red," and getting adaptive problems that are several grade levels below his peers.</p>
+
+      <h2>The constraints</h2>
+      <p>The biggest pedagogical constraint was designing a tool that prepares students for on-level proficiency in math standards aligned to district and state assessments. To address this, I focused the core interaction as a chunking/scaffolding exercise around the skills that matter most: multiplication, division, and multi-step word problems. From my classroom experience, I observed that across all levels students made the most errors not because they couldn't do the math, but because they couldn't decode what the word problem was asking. By having students practice conceptualizing a problem and mapping out their approach before solving, the tool builds a transferable strategy &mdash; one they can apply not just in the product, but on state testing too.</p>
+
+      <p>Students would engage with this tool during station rotations or morning work periods before the first bell &mdash; typically in 10&ndash;20 minute sessions that end abruptly with classroom transitions rather than natural stopping points. Devices are school-owned and shared. To address this, I gave each student an individual account that persists across devices and sessions, preserving progress regardless of which Chromebook they log into. I also opted for end-of-lesson progress summaries rather than end-of-session ones because in a real classroom, the bell doesn't wait for a clean stopping point.</p>
+
+      <p>I chose UDL as my design framework not as a compliance checkbox, but because of my direct experience teaching students with disabilities. UDL is scientifically backed to improve educational outcomes for all learners while proactively building in differentiation &mdash; saving teachers time and reducing the need for one-off accommodations after the fact. Read-aloud buttons and visual support for every word problem and instruction were non-negotiable: accessibility is not a feature, it is a foundation. I also made the deliberate decision to eliminate drag-and-drop interactions entirely. Students like Myles who are on the autism spectrum often experience fine motor skill challenges, and the Chromebooks issued to Title I students are not conducive to small, precise trackpad movements.</p>
+
+      <h2>Writing the How Might We statements</h2>
+      <p>Moving from research into design, the central tension I needed to hold was this: how do you build a tool that genuinely improves math performance while also protecting &mdash; and actively building &mdash; a struggling student's confidence? Every existing tool I examined sacrificed one for the other. My How Might We statements were designed to keep both in frame simultaneously.</p>
+
+      <ol>
+        <li>
+          <strong>How might we help a student feel accomplished in their wins without feeling compared to peers?</strong>
+          <p>This question emerged from watching how quickly students internalize being "behind." A tool that visibly tracks or displays performance differences risks reinforcing the exact identity Myles is already forming about himself as a math learner.</p>
+        </li>
+        <li>
+          <strong>How might we design adaptive rigor so a student never feels "dumb" when a problem is too easy or too hard?</strong>
+          <p>This came from the consistent finding across my research that wrong answers are treated as failure events &mdash; scores drop, animations replay, problems become way too easy, and control is taken away. It takes even longer to build back up after a mistake. I wanted to design a tool where difficulty is calibrated to keep Myles challenged enough to grow, without feeling like the system thinks he's "dumb" by either giving problems way too easy, or feeling frustrated if problems are too challenging for him to engage.</p>
+        </li>
+        <li>
+          <strong>How might we give teachers the data and oversight they need without making students feel watched, judged, or reduced to a number?</strong>
+          <p>This question addressed one of the biggest flaws I see in the market: tools are either designed for kids, or for teachers. Rarely do both parties feel satisfied. Teachers and administrators need data, oversight, and control. However, the product should be a positive, confidence and independence-building tool for the students.</p>
+        </li>
+      </ol>
+
+      <h2>Designing the core interaction loop</h2>
+
+      <p>The session begins with a 5&ndash;7 minute warm-up of flashcard-style fluency practice: one problem at a time, covering multi-digit addition and subtraction and multiplication and division fact families. A personal counter tallies correct answers, and the teacher sets the timer for the warm-up duration. The warm-up closes with a specific, diagnostic feedback message (e.g. "Great job adding 2-digit numbers! Keep practicing regrouping with subtraction"). The warm-up is visually distinct from the main lesson by design: brighter, faster-paced, with no redirects or retry paths. The goal is simple &mdash; by completing lower-stakes fluency problems first, Myles enters the main lesson having already gotten some things right. Those small early wins build the psychological momentum he needs to attempt something harder. The foundational skills practiced in the warm-up also directly support the main lesson content, making the transition feel connected rather than arbitrary.</p>
+
+      <div class="compare">
+        <p class="compare-label">Warm-up screen</p>
+        <p class="compare-note">Analog sketch alongside the Figma wireframe.</p>
+        <div class="compare-grid">
+          <figure>
+            <div class="image-placeholder"><span>Sketch photo<br>warmup-sketch.jpg</span></div>
+            <figcaption>Early paper sketch</figcaption>
+          </figure>
+          <figure>
+            <div class="image-placeholder"><span>Wireframe PNG<br>warmup-wireframe.png</span></div>
+            <figcaption>Figma wireframe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>When Myles enters the main lesson, he's greeted by an "I can" statement in a banner at the top of the screen &mdash; the lesson objective written in student-facing language, rooted in state standards. Before Myles is asked to do anything, he's reminded what he's capable of doing. Beneath the banner sits the word problem itself, with a read-aloud button. Below the problem is a simple illustration that brings the story of the problem to life visually. This is rooted in cognitivism &mdash; the illustration activates prior knowledge and real-world associations, giving Myles a mental hook to attach the abstract math to something familiar before he's asked to solve anything. All he has to do at this screen is click continue after reading.</p>
+
+      <div class="compare">
+        <p class="compare-label">Problem presentation screen</p>
+        <p class="compare-note">Analog sketch alongside the Figma wireframe.</p>
+        <div class="compare-grid">
+          <figure>
+            <div class="image-placeholder"><span>Sketch photo<br>problem-sketch.jpg</span></div>
+            <figcaption>Early paper sketch</figcaption>
+          </figure>
+          <figure>
+            <div class="image-placeholder"><span>Wireframe PNG<br>problem-wireframe.png</span></div>
+            <figcaption>Figma wireframe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>After clicking continue, the screen shifts into a two-panel layout. The word problem moves to a right-side panel, remaining fully visible throughout &mdash; Myles is never asked to memorize what he just read, but he is asked to engage with it analytically. On the left, he sees the key steps or "chunks" of the problem presented out of order. His job is to sequence them by typing 1 for what happens first, 2 for second, and so on. The "I can" statement remains fixed in the banner at the top &mdash; a constant, quiet reminder of what this lesson is building toward. By keeping the problem visible while asking Myles to sequence its logic, the interaction builds analytical reading skills alongside math reasoning &mdash; two things state assessments test simultaneously, and two things struggling students are rarely given structured practice doing together.</p>
+
+      <div class="compare">
+        <p class="compare-label">Chunking &amp; sequencing interaction</p>
+        <p class="compare-note">Analog sketch alongside the Figma wireframe.</p>
+        <div class="compare-grid">
+          <figure>
+            <div class="image-placeholder"><span>Sketch photo<br>chunking-sketch.jpg</span></div>
+            <figcaption>Early paper sketch</figcaption>
+          </figure>
+          <figure>
+            <div class="image-placeholder"><span>Wireframe PNG<br>chunking-wireframe.png</span></div>
+            <figcaption>Figma wireframe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>If Myles sequences the steps incorrectly, the misplaced chunks receive a gentle highlight and an "almost there..." message appears. Myles isn't starting over; he's continuing to work through the problem, getting closer. This distinction matters for a student who has spent years associating mistakes with failure. From there, Myles is directed to a check-for-understanding screen. The word problem reappears at the top, one sentence at a time. Myles must read each sentence &mdash; or use the read-aloud button &mdash; and answer a multiple choice comprehension question before advancing to the next sentence. If he answers incorrectly, he gets another attempt with a reduced number of response options, narrowing the cognitive load without handing him the answer. The re-engagement path doesn't automatically correct Myles' sequence because that would defeat the purpose. By requiring him to work through the problem sentence by sentence, both Myles and his teacher can see exactly where the misconception lives &mdash; which step he misunderstood, and why. That granularity is what makes the teacher-facing report meaningful, and what makes the re-engagement path a learning moment rather than just a reset.</p>
+
+      <div class="compare">
+        <p class="compare-label">Re-engagement path</p>
+        <p class="compare-note">Analog sketch alongside the Figma wireframe.</p>
+        <div class="compare-grid">
+          <figure>
+            <div class="image-placeholder"><span>Sketch photo<br>reengagement-sketch.jpg</span></div>
+            <figcaption>Early paper sketch</figcaption>
+          </figure>
+          <figure>
+            <div class="image-placeholder"><span>Wireframe PNG<br>reengagement-wireframe.png</span></div>
+            <figcaption>Figma wireframe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>After successfully completing the re-engagement screen, Myles returns to the chunking screen. The previously highlighted steps remain in place, waiting for him to correct them. The system doesn't auto-arrange them into the right order. He just previously worked through the problem sentence by sentence and identified where his thinking went wrong. Now he gets to show what he learned by fixing it with his own hands. The goal of this design choice is to provide a moment of closure, agency, and control over the correction.</p>
+
+      <p>In the scenario where Myles gets the sequencing correct the first time, there will be a pop-up that reads specific positive feedback like "You broke the problem into the right steps &mdash; that's the hard part!" This design is intended to provide specific rather than generic praise, which will build Myles' confidence and give him words to name the skills he's sharpening. That kind of feedback will stick more than "good job." Hopefully, by naming the wins thoughtfully, Myles will start to see himself as someone who is good at math.</p>
+
+      <p>When Myles completes the full assigned lesson &mdash; which may span multiple sessions and multiple problems &mdash; he sees a summary screen showing the skills he has strengthened or learned, framed in the same "I can" language from the lesson banner. There is no score, no percentage, and no pass/fail label. This is by design. Myles only reaches this screen by completing the lesson, and he cannot complete the lesson without demonstrating proficiency through the chunking and re-engagement process. The summary is just confirming what he's already proved capable of through his work. The honest limitation is that low-performing students may take significantly longer to reach this screen, given the number of re-engagements and corrections involved. I made the deliberate choice that delayed gratification is better than two alternatives: giving Myles a failing score, or passing him through without genuine demonstration of the skill. All session data &mdash; time spent, types of errors, level of support needed &mdash; is sent directly to the teacher portal and is never visible to Myles.</p>
+
+      <div class="compare">
+        <p class="compare-label">Teacher roster report</p>
+        <p class="compare-note">Analog sketch alongside the Figma wireframe.</p>
+        <div class="compare-grid">
+          <figure>
+            <div class="image-placeholder"><span>Sketch photo<br>roster-sketch.jpg</span></div>
+            <figcaption>Early paper sketch</figcaption>
+          </figure>
+          <figure>
+            <div class="image-placeholder"><span>Wireframe PNG<br>roster-wireframe.png</span></div>
+            <figcaption>Figma wireframe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h2>The tradeoffs</h2>
+      <p>Every design decision in this project was shaped by two things: what I learned from two years in a Title I classroom, and what I found was missing across the adaptive math tool market. Here are the four tradeoffs I thought hardest about.</p>
+
+      <ol>
+        <li>
+          <strong>Universal chunking requirement for all students.</strong>
+          <p>All students, regardless of performance level, must complete the "Step It Out" sequencing interaction before solving a problem. This risks frustrating high-performing students who may find the chunking step slower than necessary for problems they find easy. Chunking isn't only a scaffolding tool &mdash; it's a metacognitive habit that deepens understanding for all learners. Research on cognitive load theory supports requiring this step across ability levels: it reduces errors for struggling students and builds analytical discipline for stronger ones.</p>
+        </li>
+        <li>
+          <strong>Removing animation from the re-engagement path.</strong>
+          <p>During re-engagement, the word problem is presented with read-aloud support, word-by-word highlighting, and the same static illustration from the previous screen. A richer visual representation &mdash; animation &mdash; could benefit some learners, particularly those who respond better to narrative/visual storytelling than text. However, the re-engagement path is already a high-cognitive-load moment, and adding animation at this specific point risks visual overwhelm and may encourage guessing, particularly for students with autism or SLD. This is a candidate for user research or A/B testing in a future iteration.</p>
+        </li>
+        <li>
+          <strong>Feedback conventions on teacher-facing screens vs. student-facing screens.</strong>
+          <p>Color-coded and state-aligned performance tiering (blue = distinguished, green = proficient, yellow = developing, red = beginning) is visible only to teachers. Keeping this data from students means they may lack visibility into their own standing &mdash; potentially hindering realistic goal setting or ownership. However, this choice was made deliberately: students in this product will not see failing marks, red zones, or scores that place them grade levels below their peers. They will get enough of that from tests, quizzes, and report cards.</p>
+        </li>
+        <li>
+          <strong>End-of-lesson summary instead of end-of-session summary.</strong>
+          <p>A progress summary appears only when a student completes an entire assigned lesson, not at the end of every session. From direct classroom experience, station rotations rarely end cleanly &mdash; the bell doesn't wait. Designing a closing moment for every session assumes a predictability that real classrooms don't have. The honest cost of this decision is twofold: it removes a consistent closing ritual that would benefit students on the autism spectrum, and for students who take several sessions to complete a lesson, the summary may feel distant &mdash; potentially affecting motivation or goal tracking. These are areas worth monitoring in a future iteration.</p>
+        </li>
+      </ol>
+
+      <h2>What's next</h2>
+      <p>What I'd build, test, or validate with more time and resources:</p>
+      <ul>
+        <li>
+          <strong>An in-app automatic notetaker</strong>
+          <p>Builds a live anchor chart highlighting clue words and showing strategies, which students can edit or type into to keep track of steps. Constructivist theory argues that students do not passively absorb information, but must build it hands-on &mdash; an editable anchor chart would let students actively engage with the strategies and improve their memory.</p>
+        </li>
+        <li>
+          <strong>A personalized avatar/character</strong>
+          <p>Rewarded by teachers with outfits or different backgrounds/wallpapers for the warm-up screen. Teachers could use this as a classroom management motivator &mdash; outfits and accessories as rewards for the class staying in their seats or staying quiet during the lesson, for example.</p>
+        </li>
+        <li>
+          <strong>Deeper teacher-facing screens</strong>
+          <p>Continuing to wireframe and build out more options for data such as mastery projection and possible interventions/support options. The teacher opportunities for this app are exciting, and there are many directions I'd love to explore with more time, resources, and conversations with more teachers.</p>
+        </li>
+      </ul>
+
+      <hr>
+
+      <p><a href="about.html">More about me &rarr;</a></p>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Sophia Pinto</p>
+      <p><a href="index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
