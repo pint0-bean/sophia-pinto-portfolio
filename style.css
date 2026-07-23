@@ -1,0 +1,427 @@
+/* ============================================
+   Sophia Pinto — Portfolio
+   Warm, minimal, one heading font + one body font
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #FAF8F4;
+  --text: #1F1E1C;
+  --text-secondary: #6B6860;
+  --accent: #E8570A;
+  --accent-dark: #C24A08;
+  --border: #E5E1D8;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Layout shell ---------- */
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Nav ---------- */
+
+.site-nav {
+  padding: 32px 0 0;
+}
+
+.site-nav .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-nav .mark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* ---------- Hero (home page) ---------- */
+
+.hero {
+  padding: 96px 0 64px;
+}
+
+.hero .eyebrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.hero .one-liner {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  color: var(--text);
+  max-width: 30ch;
+  margin: 0 0 32px;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent);
+}
+
+.hero .intro {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 40px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #FFFDF9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 14px 24px;
+  border-radius: 4px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+  color: #FFFDF9;
+  transform: translateY(-1px);
+}
+
+.btn .arrow {
+  transition: transform 0.15s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: none;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 96px;
+  padding: 28px 0 64px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-footer p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ---------- Generic content sections (case-study / about pages) ---------- */
+
+.page-header {
+  padding: 64px 0 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header .eyebrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 5vw, 2.8rem);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.page-header .dek {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0;
+}
+
+.content {
+  padding: 48px 0;
+}
+
+.content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 56px 0 16px;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 32px 0 12px;
+}
+
+.content p {
+  margin: 0 0 20px;
+}
+
+.content figure {
+  margin: 32px 0;
+}
+
+.content figure img {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.content figcaption {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin-top: 10px;
+}
+
+/* ---------- Case study content components ---------- */
+
+.content .eyebrow-label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.callout {
+  border-left: 3px solid var(--accent);
+  background: #FEF3EB;
+  padding: 22px 24px;
+  margin: 32px 0 40px;
+  border-radius: 0 4px 4px 0;
+}
+
+.callout .callout-label {
+  display: block;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.callout p + p {
+  margin-top: 12px;
+}
+
+.content ol,
+.content ul {
+  padding-left: 22px;
+  margin: 0 0 24px;
+}
+
+.content li {
+  margin-bottom: 16px;
+}
+
+.content li p {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+.content li strong {
+  color: var(--text);
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 56px 0;
+}
+
+/* Side-by-side sketch + wireframe pairs */
+
+.compare {
+  margin: 40px 0;
+}
+
+.compare-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 4px;
+}
+
+.compare-note {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin: 0 0 16px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.compare-grid figure {
+  margin: 0;
+}
+
+.compare-grid img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.image-placeholder {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  background: #F2EFE8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.image-placeholder span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.compare-grid figcaption {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav ul {
+    gap: 18px;
+  }
+  .hero {
+    padding: 64px 0 48px;
+  }
+}
